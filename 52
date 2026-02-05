@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t_kat[7];
+    for(int i=0;i<7;i++) cin>>t_kat[i];
+
+    int SCHOWEK, zmiana;
+    do {
+        zmiana = 0;
+        for(int i=0;i<6;i++) {
+            if(t_kat[i] > t_kat[i+1]) {
+                SCHOWEK = t_kat[i];
+                t_kat[i] = t_kat[i+1];
+                t_kat[i+1] = SCHOWEK;
+                zmiana++;
+            }
+        }
+    } while(zmiana != 0);
+
+    for(int i=0;i<7;i++) cout<<t_kat[i]<<" ";
+    return 0;
+}
