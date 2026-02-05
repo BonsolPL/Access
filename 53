@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int tab_kat[7];
+    for(int i=0;i<7;i++) cin>>tab_kat[i];
+
+    int Bufor, min;
+    for(int i=0;i<6;i++) {
+        min = i;
+        for(int j=i+1;j<7;j++) {
+            if(tab_kat[j] < tab_kat[min]) min = j;
+        }
+        Bufor = tab_kat[min];
+        tab_kat[min] = tab_kat[i];
+        tab_kat[i] = Bufor;
+    }
+
+    for(int i=0;i<7;i++) cout<<tab_kat[i]<<" ";
+    return 0;
+}
