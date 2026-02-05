@@ -3,19 +3,34 @@ using namespace std;
 
 int main() {
     int tab_kat[7];
-    for(int i=0;i<7;i++) cin>>tab_kat[i];
 
-    int Bufor, min;
+    cout<<"Podaj numer z dziennika: ";
+    cin>>tab_kat[0];
+    cout<<"Podaj liczbe liter imienia: ";
+    cin>>tab_kat[1];
+    cout<<"Podaj wzrost: ";
+    cin>>tab_kat[2];
+    cout<<"Podaj liczbe liter nazwiska: ";
+    cin>>tab_kat[3];
+    cout<<"Podaj dwie ostatnie cyfry roku: ";
+    cin>>tab_kat[4];
+    cout<<"Podaj dzisiejszy dzien: ";
+    cin>>tab_kat[5];
+    cout<<"Podaj obecny miesiac: ";
+    cin>>tab_kat[6];
+
+    int Bufor_kat, min;
     for(int i=0;i<6;i++) {
         min = i;
         for(int j=i+1;j<7;j++) {
             if(tab_kat[j] < tab_kat[min]) min = j;
         }
-        Bufor = tab_kat[min];
+        Bufor_kat = tab_kat[min];
         tab_kat[min] = tab_kat[i];
-        tab_kat[i] = Bufor;
+        tab_kat[i] = Bufor_kat;
     }
 
+    cout<<"Tablica po sortowaniu: ";
     for(int i=0;i<7;i++) cout<<tab_kat[i]<<" ";
     return 0;
 }
