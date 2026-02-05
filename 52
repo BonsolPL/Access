@@ -3,21 +3,36 @@ using namespace std;
 
 int main() {
     int t_kat[7];
-    for(int i=0;i<7;i++) cin>>t_kat[i];
 
-    int SCHOWEK, zmiana;
+    cout<<"Podaj numer z dziennika: ";
+    cin>>t_kat[0];
+    cout<<"Podaj liczbe liter imienia: ";
+    cin>>t_kat[1];
+    cout<<"Podaj liczbe liter nazwiska: ";
+    cin>>t_kat[2];
+    cout<<"Podaj miesiac urodzenia: ";
+    cin>>t_kat[3];
+    cout<<"Podaj dzien urodzenia: ";
+    cin>>t_kat[4];
+    cout<<"Podaj numer buta: ";
+    cin>>t_kat[5];
+    cout<<"Podaj wage w kg: ";
+    cin>>t_kat[6];
+
+    int SCHOWEK_kat, zmiana;
     do {
         zmiana = 0;
         for(int i=0;i<6;i++) {
             if(t_kat[i] > t_kat[i+1]) {
-                SCHOWEK = t_kat[i];
+                SCHOWEK_kat = t_kat[i];
                 t_kat[i] = t_kat[i+1];
-                t_kat[i+1] = SCHOWEK;
+                t_kat[i+1] = SCHOWEK_kat;
                 zmiana++;
             }
         }
     } while(zmiana != 0);
 
+    cout<<"Tablica po sortowaniu: ";
     for(int i=0;i<7;i++) cout<<t_kat[i]<<" ";
     return 0;
 }
