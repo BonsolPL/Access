@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Podaj godziny: ");
+        int g = sc.nextInt();
+
+        System.out.print("Podaj minuty: ");
+        int m = sc.nextInt();
+
+        Czas czas = new Czas(g, m);
+
+        System.out.print("Ile minut dodać: ");
+        int dod = sc.nextInt();
+
+        czas.dodajMinuty(dod);
+
+        System.out.println("Nowy czas: " + czas);
+    }
+}
